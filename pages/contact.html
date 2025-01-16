@@ -1,2 +1,45 @@
-<h1>Contact</h1>
-<p>Get in touch with us using the form below.</p>
+<!-- Contact Form -->
+   <!-- <form id="contact-form" method="post">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+    
+    <button type="submit">Submit</button>
+    
+    <div id="error-message" class="form-message error-message" style="visibility: hidden;"></div>
+    <div id="success-message" class="form-message success-message" style="visibility: hidden;"></div>
+  </form>
+   -->
+
+   <!-- Contact Form Section -->
+<section id="contact">
+    <h1>Contact Us</h1>
+    <form action="/" method="POST" id="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your Name" />
+  
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="Your Email" />
+  
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required placeholder="Your Message"></textarea>
+  
+      <!-- Error and Success Messages -->
+      <div class="form-messages">
+        <!-- Success and error messages will appear here -->
+      </div>
+  
+      <button type="submit">Submit</button>
+    </form>
+  </section>
