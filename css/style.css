@@ -178,3 +178,87 @@ body {
     padding: 0.8rem 1.5rem;
   }
 }
+
+/* Features Section Styling */
+.features-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  text-align: center;
+  flex-wrap: wrap; /* Allow columns to wrap if necessary */
+}
+
+.feature-image img {
+  max-width: 250px; /* Ensure the image isn't too big */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-description {
+  max-width: 600px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-description h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.feature-description p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Responsive Design - Mobile & Tablet */
+@media (max-width: 1024px) {
+  .features-section {
+    flex-direction: row; /* Ensure two columns layout on tablets */
+    justify-content: center;
+    text-align: left;
+  }
+
+  .feature-image,
+  .feature-description {
+    width: 45%; /* Set both columns to take up 45% width on tablet screens */
+  }
+
+  .feature-image img {
+    max-width: 200px; /* Slightly smaller image on tablets */
+  }
+
+  .feature-description {
+    padding: 1rem;
+  }
+}
+
+/* Small Devices (Phones, <600px) */
+@media (max-width: 600px) {
+  .features-section {
+    flex-direction: row; /* Keep both columns side by side on smaller screens */
+    justify-content: center;
+    gap: 1rem; /* Add space between the columns */
+  }
+
+  .feature-image,
+  .feature-description {
+    width: 45%; /* Keep both columns at 45% width even on phones */
+    text-align: center;
+  }
+
+  .feature-image img {
+    max-width: 200px; /* Adjust the size of the image */
+  }
+
+  .feature-description {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+}
