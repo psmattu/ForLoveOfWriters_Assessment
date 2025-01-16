@@ -1,114 +1,180 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body Styling */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background-image: url("../assets/cookie-background.jpg");
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes up full height */
+}
+
+/* Navigation Bar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links li {
+  display: inline;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #f9a826; /* Accent color for hover */
+}
+
+/* Main Content Styling */
+.main-content {
+  text-align: center;
+  padding: 2rem;
+  flex: 1 0 auto; /* Allows content to grow, but not to overflow */
+  margin-top: 6rem; /* Ensures the content stays below the fixed navbar */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column;
+}
+
+/* Responsive Design with Media Queries */
+
+/* Small Devices (Mobile, <600px) */
+@media (max-width: 600px) {
   body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes up full height */
   }
-  
-  /* Navigation Bar Styling */
+
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 2rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .navbar .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .navbar .nav-links li {
-    display: inline;
-  }
-  
-  .navbar .nav-links a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar .nav-links a:hover {
-    color: #f9a826; /* Accent color for hover */
-  }
-  
-  /* Main Content Styling */
-  .main-content {
-    text-align: center;
-    padding: 2rem;
-    flex: 1 0 auto; /* Allows content to grow, but not to overflow */
-    margin-top: 6rem; /* Ensures the content stays below the fixed navbar */
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
     flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
   }
-  
-  /* Responsive Design with Media Queries */
-  
-  /* Small Devices (Mobile, <600px) */
-  @media (max-width: 600px) {
-    body {
-      flex-direction: column;
-    }
-  
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 1rem;
-    }
-  
-    .navbar .logo {
-      margin-bottom: 1rem;
-    }
-  
-    .navbar .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  
-    .navbar .nav-links a {
-      font-size: 1.2rem;
-    }
-  
-    /* Adjust main content margin for mobile */
-    .main-content {
-      margin-top: 6rem; /* Adjust space for the fixed navbar */
-      padding: 1.5rem;
-      flex-grow: 1;
-    }
+
+  .navbar .logo {
+    margin-bottom: 1rem;
   }
-  
-  /* Medium Devices (Tablet, 600px - 1024px) */
-  @media (min-width: 600px) and (max-width: 1024px) {
-    .navbar .nav-links a {
-      font-size: 1.1rem;
-    }
-  
-    .navbar {
-      padding: 1rem 1.5rem;
-    }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
   }
-  
+
+  .navbar .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  /* Adjust main content margin for mobile */
+  .main-content {
+    margin-top: 6rem; /* Adjust space for the fixed navbar */
+    padding: 1.5rem;
+    flex-grow: 1;
+  }
+}
+
+/* Medium Devices (Tablet, 600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .navbar .nav-links a {
+    font-size: 1.1rem;
+  }
+
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* Hero Section Styling */
+.hero {
+  background: #f9a826; /* Hero background color */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Make the hero section take up 60% of the viewport height */
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  background-color: #fff;
+  color: #f9a826;
+  border: none;
+  font-size: 1.1rem;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #f9a826;
+  color: #fff;
+}
+
+/* Responsive Design for Hero Section */
+@media (max-width: 600px) {
+  .hero {
+    height: 50vh;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
